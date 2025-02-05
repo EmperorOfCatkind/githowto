@@ -1,5 +1,4 @@
-function arrays()
-{
+function arrays() {
     const arrNumbers = [6, 4, 1, 7];
     const arrStrings = ["John", "Smith", "Kurt", "Dave"];
     const arrBools = [true, true, false, true, false];
@@ -51,8 +50,7 @@ function arrays()
     console.log("----------");
 
     const arrOnlyNumbers = arrAny.map((el) => {
-        if(typeof el === 'string')
-        {
+        if(typeof el === 'string') {
             return el;
         }
     });
