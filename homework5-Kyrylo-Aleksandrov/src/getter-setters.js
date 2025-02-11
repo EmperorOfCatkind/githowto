@@ -1,48 +1,48 @@
 const user = {
-    name: "John",
-    surname: "Smith",
-    age: 30,
-    job: {
+    _name: "John",
+    _surname: "Smith",
+    _age: 30,
+    _job: {
         company: "Microsoft",
         position: "developer"
     },
 
-    get first_name(){
-        return this.name;
+    get name(){
+        return this._name;
     },
-    set first_name(newName){
+    set name(newName){
         this.name = newName;
     },
 
-    get last_name(){
-        return this.surname;
+    get surname(){
+        return this._surname;
     },
-    set last_name(newName){
+    set surname(newName){
         this.surname = newName;
     },
 
-    get the_age(){
-        return this.age;
+    get age(){
+        return this._age;
     },
-    set the_age(newAge){
-        this.age = newAge;
+    set age(newAge){
+        this._age = newAge;
     },
 
-    get employment(){
-        return this.job;
+    get job(){
+        return this._job;
     },
-    set employment(newJob){
-        this.job = newJob;
+    set job(newJob){
+        this._job = newJob;
     },
 
     getFullUserInfo(){
-        return "Full name: " + this.name + " " + this.surname + "; Age: " + this.age + "; Place of work: " + this.job.position + " at " + this.job.company + ";";
+        return "Full name: " + this._name + " " + this._surname + "; Age: " + this._age + "; Place of work: " + this._job.position + " at " + this._job.company + ";";
     }
 };
 
 console.log(user.getFullUserInfo());
-user.first_name = "Alice";
-user.last_name = "Cooper";
-user.the_age = 25;
-user.employment = {company: "Apple", position: "designer"};
+user.name = "Alice";
+user.surname = "Cooper";
+user.age = 25;
+user.job = {company: "Apple", position: "designer"};
 console.log(user.getFullUserInfo());
