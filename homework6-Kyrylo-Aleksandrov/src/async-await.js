@@ -1,4 +1,4 @@
-async function GetDataFromResponse(){
+async function getDataFromResponse(){
 
     const response = await fetch('https://official-joke-api.appspot.com/random_joke');
     const json = await response.json();
@@ -6,4 +6,5 @@ async function GetDataFromResponse(){
 
     return json;
 }
-GetDataFromResponse();
+
+await getDataFromResponse();

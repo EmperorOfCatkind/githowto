@@ -1,4 +1,4 @@
-async function TryGetService(){
+async function tryGetService(){
     try{
         console.log("Attempting to reach non-existing API");
         const response = await fetch('https://api.publicapis.org/entries');
@@ -12,13 +12,13 @@ async function TryGetService(){
             console.log("body: ", json);
             return json;
         }catch{
-            CustomError();
+            customError();
         }
     }
 }
 
-function CustomError(){
+function customError(){
     throw new Error("None of these APIs exist");
 }
 
-TryGetService();
+await tryGetService();
