@@ -1,19 +1,18 @@
-# js-eslint-config
-recommended config from me for programming on a JavaScript
+# ts-eslint-config
+recommended config from me for programming on a TypeScript
 
 In order to use this config you have to install the following NPM packages
 ```
-npm init
-npm i -D @eslint/js eslint globals eslint-plugin-unicorn
+npm i -D typescript ts-node eslint typescript-eslint @eslint/js @typescript-eslint/eslint-plugin @typescript-eslint/parser @stylistic/eslint-plugin @stylistic/eslint-plugin-ts eslint-plugin-prettier eslint-plugin-unicorn prettier globals
 ```
 
-Then put eslint.config.mjs and .prettierrc into your base directory
+Then put eslint.config.mjs into your base directory
 
 you can add a script to your package.json
 ```
 "scripts": {
   "lint": "eslint .",
-  "build": "npm run lint && <build script>",
+  "build": "npm run lint && tsc --build",
 }
 ```
 
