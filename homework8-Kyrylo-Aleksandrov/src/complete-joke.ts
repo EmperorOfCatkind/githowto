@@ -1,13 +1,4 @@
-export interface Joke {
-    type: string;
-    setup: string;
-    punchline: string;
-    id: number;
-}
-
-export interface ApiResponse {
-    body: Joke;
-}
+import { ApiResponse } from './api-response';
 
 export class CompleteJoke{
     public elements: Partial<ApiResponse>;
