@@ -9,22 +9,41 @@ import { Motorcycle } from 'src/motorcycle';
 import { Truck } from 'src/truck';
 import { ElectricCar } from 'src/electric-car';
 
+let instance: sinon.SinonStubbedInstance<Dealership>;
+let service: DealershipService;
+
+let toyota: Car;
+let peugeot: Car;
+let renault: Car;
+let lamborghini: Car;
+
+let fiat: Motorcycle;
+let skoda: Truck;
+let tesla: ElectricCar;
+
+
 describe('DealershipService tests', () =>{
 
-    const instance = sinon.createStubInstance(Dealership);
-    const service = new DealershipService(instance);
+    beforeEach(() => {
+        toyota = new Car('Toyota', 'Camry', 120, Type.Car, 4);
+        peugeot = new Car('Peugeot', 'Logo', 130, Type.Car, 4);
+        renault = new Car('Renault', 'Tiara', 140, Type.Car, 4);
+        lamborghini = new Car('Lamborghini', 'Tiara', 180, Type.Car, 4);
+
+        fiat = new Motorcycle('Fiat', 'Cortina', 135, Type.Motorcycle, false);
+        skoda = new Truck('Skoda', 'Fabia', 180, Type.Truck, 2000);
+        tesla = new ElectricCar('Tesla', 'X', 190, Type.ElectricCar, 200);
+
+        instance = sinon.createStubInstance(Dealership);
+        service = new DealershipService(instance);
+    });
 
     describe('findPriceRange tests', () =>{
-        const toyota = new Car('Toyota', 'Camry', 120, Type.Car, 4);
-        const fiat = new Motorcycle('Fiat', 'Cortina', 135, Type.Motorcycle, false);
-        const skoda = new Truck('Skoda', 'Fabia', 180, Type.Truck, 2000);
-        const tesla = new ElectricCar('Tesla', 'X', 190, Type.ElectricCar, 200);
 
         const priceBetween100and200: Vehicle[] = [toyota, fiat, skoda, tesla] as Vehicle[];
 
-        instance.findPriceRange.returns(priceBetween100and200);
-
         it('findPriceRange accepts correct input and returns data', () => {
+            instance.findPriceRange.returns(priceBetween100and200);
             const result = service.findPriceRange(100, 200);
 
             expect (result).to.be.equal(priceBetween100and200);
@@ -37,16 +56,10 @@ describe('DealershipService tests', () =>{
 
     describe('findSpecificType tests', () =>{
 
-        const toyota = new Car('Toyota', 'Camry', 120, Type.Car, 4);
-        const fiat = new Car('Fiat', 'Cortina', 135, Type.Car, 4);
-        const skoda = new Car('Skoda', 'Fabia', 180, Type.Car, 4);
-        const tesla = new Car('Tesla', 'X', 190, Type.Car, 4);
-
-        const carArray: Vehicle[] = [toyota, fiat, skoda, tesla] as Vehicle[];
-
-        instance.findSpecificType.returns(carArray);
+        const carArray: Vehicle[] = [toyota, peugeot, renault, lamborghini] as Vehicle[];
 
         it('findSpecificType returns data', () => {
+            instance.findSpecificType.returns(carArray);
             const result = service.findSpecificType(Type.Car);
 
             expect (result).to.be.equal(carArray);
@@ -56,12 +69,9 @@ describe('DealershipService tests', () =>{
 
     describe('calculateVehiclePrice tests', () =>{
 
-        const toyota = new Car('Toyota', 'Camry', 120, Type.Car, 4);
-        const price = instance.calculateVehiclePrice(toyota);
-
-        instance.calculateVehiclePrice.returns(price);
-
         it('calculateVehiclePrice returns data', () => {
+            const price = instance.calculateVehiclePrice(toyota);
+            instance.calculateVehiclePrice.returns(price);
             const result = service.calculateVehiclePrice(toyota);
 
             expect (result).to.be.equal(price);
@@ -69,13 +79,11 @@ describe('DealershipService tests', () =>{
     });
 
     describe('getVehicleInfo tests', () =>{
-        const fiat = new Car('Fiat', 'Cortina', 135, Type.Car, 4);
 
-        const info = fiat.getVehicleInfo();
-
-        instance.getVehicleInfo.returns(info);
         it('getVehicleInfo returns data', () => {
-            const result = service.getVehicleInfo(fiat);
+            const info = lamborghini.getVehicleInfo();
+            instance.getVehicleInfo.returns(info);
+            const result = service.getVehicleInfo(lamborghini);
 
             expect (result).to.be.equal(info);
         });
@@ -83,20 +91,13 @@ describe('DealershipService tests', () =>{
 
     describe('findCheapestCar tests', () =>{
 
-        const toyota = new Car('Toyota', 'Camry', 120, Type.Car, 4);
-        const fiat = new Car('Fiat', 'Cortina', 135, Type.Car, 4);
-        const skoda = new Car('Skoda', 'Fabia', 180, Type.Car, 4);
-        const tesla = new Car('Tesla', 'X', 190, Type.Car, 4);
-
-        const carArray: Vehicle[] = [toyota, fiat, skoda, tesla] as Vehicle[];
-
-        instance.findCheapestCar.returns(toyota);
+        const carArray: Vehicle[] = [toyota, peugeot, renault, lamborghini] as Vehicle[];
 
         it('findCheapestCar returns data', () => {
+            instance.findCheapestCar.returns(toyota);
             const result = service.findCheapestCar(carArray);
 
             expect (result).to.be.equal(toyota);
         });
     });
-
 });
