@@ -9,20 +9,19 @@ import { Motorcycle } from 'src/motorcycle';
 import { Truck } from 'src/truck';
 import { ElectricCar } from 'src/electric-car';
 
-let instance: sinon.SinonStubbedInstance<Dealership>;
-let service: DealershipService;
-
-let toyota: Car;
-let peugeot: Car;
-let renault: Car;
-let lamborghini: Car;
-
-let fiat: Motorcycle;
-let skoda: Truck;
-let tesla: ElectricCar;
-
-
 describe('DealershipService tests', () =>{
+
+    let instance: sinon.SinonStubbedInstance<Dealership>;
+    let service: DealershipService;
+
+    let toyota: Car;
+    let peugeot: Car;
+    let renault: Car;
+    let lamborghini: Car;
+
+    let fiat: Motorcycle;
+    let skoda: Truck;
+    let tesla: ElectricCar;
 
     beforeEach(() => {
         toyota = new Car('Toyota', 'Camry', 120, Type.Car, 4);
