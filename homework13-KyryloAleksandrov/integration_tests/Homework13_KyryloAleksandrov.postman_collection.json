@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "7c166c07-3179-4045-a758-1feea1bc387d",
+		"name": "Homework13_KyryloAleksandrov",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42897129"
+	},
+	"item": [
+		{
+			"name": "Upload an image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"pm.test(\"Image upload was successful\", function () {\r",
+							"    pm.expect(jsonData).to.have.property(\"id\");\r",
+							"    pm.expect(jsonData).to.have.property(\"url\");\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"image_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{YOUR-API-KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1effe967-4dd6-42b0-929b-2b4621c64b88"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}v1/images/upload",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"images",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update image with breed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"pm.test(\"Image breed update was successful\", function () {\r",
+							"    pm.expect(jsonData.message).to.eql(\"SUCCESS\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "live_gcylelWdJI7sKAVJA5F7ZCK2gbMdvvPaA1EDKXCAhQgPIzwqipQJfsGUPwohE0YR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"breed_ids\": [\"beng\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}v1/images/{{image_id}}",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"images",
+						"{{image_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random Image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"pm.test(\"Response contains at least one image\", function () {\r",
+							"    pm.expect(jsonData.length).to.be.greaterThan(0);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}v1/images/search",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"images",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get previously uploaded image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"pm.test(\"Image ID matches uploaded image\", function () {\r",
+							"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"image_id\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Breed is correctly updated\", function () {\r",
+							"    pm.expect(jsonData.breeds[0].id).to.eql(\"beng\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}v1/images/{{image_id}}",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"images",
+						"{{image_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upvote uploaded image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"pm.test(\"Vote was successful\", function () {\r",
+							"    pm.expect(jsonData.message).to.eql(\"SUCCESS\");\r",
+							"    pm.expect(jsonData).to.have.property(\"id\");\r",
+							"});\r",
+							"\r",
+							"// Save vote ID for downvote test\r",
+							"pm.environment.set(\"vote_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{YOUR-API-KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"image_id\": \"{{image_id}}\",\r\n  \"value\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}v1/votes",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"votes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Downvote uploaded image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"pm.test(\"Downvote was successful\", function () {\r",
+							"    pm.expect(jsonData.message).to.eql(\"SUCCESS\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{YOUR-API-KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"image_id\": \"{{image_id}}\",\r\n  \"value\": -1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}v1/votes",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"votes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "YOUR-API-KEY",
+			"value": "example-api-key",
+			"type": "string"
+		}
+	]
+}
