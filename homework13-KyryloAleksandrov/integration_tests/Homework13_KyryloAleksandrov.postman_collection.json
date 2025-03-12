@@ -18,6 +18,7 @@
 							"});\r",
 							"\r",
 							"let jsonData = pm.response.json();\r",
+							"\r",
 							"pm.test(\"Image upload was successful\", function () {\r",
 							"    pm.expect(jsonData).to.have.property(\"id\");\r",
 							"    pm.expect(jsonData).to.have.property(\"url\");\r",
@@ -63,95 +64,6 @@
 			"response": []
 		},
 		{
-			"name": "Update image with breed",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"let jsonData = pm.response.json();\r",
-							"pm.test(\"Image breed update was successful\", function () {\r",
-							"    pm.expect(jsonData.message).to.eql(\"SUCCESS\");\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "x-api-key",
-						"value": "live_gcylelWdJI7sKAVJA5F7ZCK2gbMdvvPaA1EDKXCAhQgPIzwqipQJfsGUPwohE0YR",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"breed_ids\": [\"beng\"]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{endpoint}}v1/images/{{image_id}}",
-					"host": [
-						"{{endpoint}}v1"
-					],
-					"path": [
-						"images",
-						"{{image_id}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Random Image",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"let jsonData = pm.response.json();\r",
-							"pm.test(\"Response contains at least one image\", function () {\r",
-							"    pm.expect(jsonData.length).to.be.greaterThan(0);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{endpoint}}v1/images/search",
-					"host": [
-						"{{endpoint}}v1"
-					],
-					"path": [
-						"images",
-						"search"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Get previously uploaded image",
 			"event": [
 				{
@@ -163,12 +75,9 @@
 							"});\r",
 							"\r",
 							"let jsonData = pm.response.json();\r",
-							"pm.test(\"Image ID matches uploaded image\", function () {\r",
-							"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"image_id\"));\r",
-							"});\r",
 							"\r",
-							"pm.test(\"Breed is correctly updated\", function () {\r",
-							"    pm.expect(jsonData.breeds[0].id).to.eql(\"beng\");\r",
+							"pm.test(\"Correct image fetched\", function () {\r",
+							"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"image_id\"));\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -178,7 +87,13 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{YOUR-API-KEY}}",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{endpoint}}v1/images/{{image_id}}",
 					"host": [
@@ -187,6 +102,51 @@
 					"path": [
 						"images",
 						"{{image_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get initial votes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"let imageId = pm.environment.get(\"image_id\");\r",
+							"\r",
+							"let initialVotes = jsonData.filter(vote => vote.image_id === imageId).length;\r",
+							"\r",
+							"pm.environment.set(\"initial_votes\", initialVotes);\r",
+							"pm.environment.set(\"total_votes\", initialVotes);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{YOUR-API-KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}v1/votes",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"votes"
 					]
 				}
 			},
@@ -204,13 +164,25 @@
 							"});\r",
 							"\r",
 							"let jsonData = pm.response.json();\r",
-							"pm.test(\"Vote was successful\", function () {\r",
-							"    pm.expect(jsonData.message).to.eql(\"SUCCESS\");\r",
+							"\r",
+							"pm.test(\"Vote registered successfully\", function () {\r",
 							"    pm.expect(jsonData).to.have.property(\"id\");\r",
 							"});\r",
 							"\r",
-							"// Save vote ID for downvote test\r",
-							"pm.environment.set(\"vote_id\", jsonData.id);"
+							"let currentTotalVotes = pm.environment.get(\"total_votes\");\r",
+							"currentTotalVotes += 1;\r",
+							"pm.environment.set(\"total_votes\", currentTotalVotes);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -248,20 +220,69 @@
 			"response": []
 		},
 		{
-			"name": "Downvote uploaded image",
+			"name": "Check if votes are added",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 201\", function () {\r",
-							"    pm.response.to.have.status(201);\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
 							"let jsonData = pm.response.json();\r",
-							"pm.test(\"Downvote was successful\", function () {\r",
-							"    pm.expect(jsonData.message).to.eql(\"SUCCESS\");\r",
+							"let imageId = pm.environment.get(\"image_id\");\r",
+							"\r",
+							"let actualVotes = jsonData.filter(vote => vote.image_id === imageId).length;\r",
+							"let expectedVotes = pm.environment.get(\"total_votes\");\r",
+							"\r",
+							"pm.test(\"Total votes match expected count\", function () {\r",
+							"    pm.expect(actualVotes).to.eql(expectedVotes);\r",
 							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{YOUR-API-KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}v1/votes",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"votes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add image to favourites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"pm.test(\"Image added to favorites\", function () {\r",
+							"    pm.expect(jsonData).to.have.property(\"id\");\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"favourite_id\", jsonData.id);"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -279,7 +300,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"image_id\": \"{{image_id}}\",\r\n  \"value\": -1\r\n}",
+					"raw": "{\r\n  \"image_id\": \"{{image_id}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -287,12 +308,60 @@
 					}
 				},
 				"url": {
-					"raw": "{{endpoint}}v1/votes",
+					"raw": "{{endpoint}}v1/favourites",
 					"host": [
 						"{{endpoint}}v1"
 					],
 					"path": [
-						"votes"
+						"favourites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify the image in favorites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let jsonData = pm.response.json();\r",
+							"let imageId = pm.environment.get(\"image_id\");\r",
+							"\r",
+							"let favoriteEntry = jsonData.find(fav => fav.image_id === imageId);\r",
+							"\r",
+							"pm.test(\"Image is in favorites\", function () {\r",
+							"    pm.expect(favoriteEntry).to.be.an(\"object\"); \r",
+							"    pm.expect(favoriteEntry).to.have.property(\"id\");\r",
+							"    pm.expect(favoriteEntry.id).to.eql(pm.environment.get(\"favourite_id\"));  \r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{YOUR-API-KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}v1/favourites",
+					"host": [
+						"{{endpoint}}v1"
+					],
+					"path": [
+						"favourites"
 					]
 				}
 			},
