@@ -1,0 +1,86 @@
+{
+  "consumer": {
+    "name": "User-Web-v3"
+  },
+  "interactions": [
+    {
+      "description": "create users with list",
+      "providerStates": [
+        {
+          "name": "users creation interaction"
+        }
+      ],
+      "request": {
+        "body": [
+          {
+            "email": "john@example.com",
+            "firstName": "John",
+            "id": 101,
+            "lastName": "Doe",
+            "password": "password123",
+            "phone": "1234567890",
+            "userStatus": 1,
+            "username": "john_doe"
+          },
+          {
+            "email": "jane@example.com",
+            "firstName": "Jane",
+            "id": 102,
+            "lastName": "Doe",
+            "password": "password456",
+            "phone": "0987654321",
+            "userStatus": 1,
+            "username": "jane_doe"
+          }
+        ],
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "method": "POST",
+        "path": "/v2/user/createWithList"
+      },
+      "response": {
+        "body": {
+          "code": 200,
+          "message": "ok",
+          "type": "unknown"
+        },
+        "headers": {
+          "Content-Type": "application/json",
+          "content-type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {},
+          "status": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "14.0.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "User-API-v3"
+  }
+}
