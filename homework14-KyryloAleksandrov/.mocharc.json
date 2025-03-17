@@ -1,6 +1,6 @@
 {
     "extension": "ts",
     "spec": "tests/**/*.spec.ts",
-    "require": ["tsx", "./hooks/mocha-global-setup.ts"],
+    "require": ["tsx"],
     "timeout": 120000
 }
