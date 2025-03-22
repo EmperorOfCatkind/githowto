@@ -1,0 +1,5 @@
+TITLE: Пошук за ключовим словом "cats"
+1. Йдемо на сторінку - https://www.youtube.com/
+2. У полі "input[name="search_query"]" вводимо cats
+3. Натискаємо "button[class="ytSearchboxComponentSearchButton ytSearchboxComponentSearchButtonDark"]"
+4. Очікуємо, що відкриється сторінка https://www.youtube.com/results?search_query=cats
