@@ -1,0 +1,6 @@
+TITLE: Перевірка наявності кнопки "Поділитися"
+1. Йдемо на сторінку - https://www.youtube.com/watch?v=paWE-GvDO1c
+2. Очікуємо наявність елемента: 
+//div[@id="top-level-buttons-computed"]//button[@class="yt-spec-button-shape-next yt-spec-button-shape-next--tonal yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-m yt-spec-button-shape-next--icon-leading"][@title="Share"]
+3. Натискаємо на елемент
+4. Очікуємо появу елементу //tp-yt-paper-dialog
