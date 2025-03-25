@@ -7,10 +7,7 @@
     "lint": "eslint src/",
     "lint:fix": "npm run lint -- --fix",
     "build": "npm run lint && tsc --build",
-    "test": "npx eslint . && mocha",
-    "cy:open": "cypress open",
-    "puppeteer:test-subscriptions": "ts-node puppeteer/youtube-subscriptions.spec.ts",
-    "puppeteer:test-video": "ts-node puppeteer/youtube-video.spec.ts"
+    "test": "npx eslint . && mocha"
   },
   "author": "",
   "license": "ISC",
@@ -27,8 +24,6 @@
     "@typescript-eslint/eslint-plugin": "^8.21.0",
     "@typescript-eslint/parser": "^8.21.0",
     "chai": "^5.2.0",
-    "cypress": "^14.2.0",
-    "cypress-shadow-dom": "^1.4.1",
     "eslint": "^9.19.0",
     "eslint-plugin-prettier": "^5.2.3",
     "esrun": "^3.2.26",
@@ -38,7 +33,6 @@
     "puppeteer": "^24.4.0",
     "ts-mocha": "^11.1.0",
     "ts-node": "^10.9.2",
-    "ts-sinon": "^2.0.2",
     "tsx": "^4.19.3",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.21.0"
