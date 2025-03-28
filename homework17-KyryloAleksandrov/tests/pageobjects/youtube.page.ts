@@ -23,6 +23,11 @@ class YouTubePage extends Page {
         return $('ytd-video-renderer:first-child #video-title');
     }
 
+    public async expectLogoToBeDisplayed(): Promise<void> {
+        const logo = await this.logo;
+        await expect(logo).toBeDisplayed();
+    }
+
     public async goToHome(): Promise<void> {
         await this.open('/');
         await this.acceptCookiesIfVisible();
@@ -34,12 +39,14 @@ class YouTubePage extends Page {
 
         const backdrop = await $('tp-yt-iron-overlay-backdrop');
 
-        const exists = await backdrop.isExisting();
-        if (exists) {
+        if (await backdrop.isExisting()) {
             await browser.waitUntil(
                 async () => {
-                    const isDisplayed = await backdrop.isDisplayed();
-                    return !isDisplayed;
+                    try {
+                        return !(await backdrop.isDisplayed());
+                    } catch {
+                        return true; // backdrop removed
+                    }
                 },
                 {
                     timeout: 15000,
@@ -49,25 +56,14 @@ class YouTubePage extends Page {
         }
 
         await logo.click();
-        const url: string = await browser.getUrl();
-        expect(url).toBe('https://www.youtube.com/');
     }
 
     public async goToTrending(): Promise<void> {
         try {
-            const guide = await this.guideButton;
-            await guide.click();
-            const entries = await this.guideEntries;
-            let entryToClick;
-            for (const e of entries) {
-                const text = await e.getText();
-                if (/Trending|Na czasie|Explore|Eksploruj/i.test(text)) {
-                    entryToClick = e;
-                    break;
-                }
-            }
-            if (!entryToClick) throw new Error('Trending/Explore entry not found in sidebar');
-            await entryToClick.click();
+            await this.guideButton.click();
+            const trending = await $('a[title="Trending"]');
+            await trending.waitForDisplayed({ timeout: 5000 });
+            await trending.click();
         } catch {
             await browser.url('/feed/trending');
         }
@@ -78,8 +74,9 @@ class YouTubePage extends Page {
         }, { timeout: 5000, timeoutMsg: 'Trending page did not load' });
     }
 
-    public async verifyFirstTrendingVideoTitle(): Promise<void> {
-        await browser.pause(2000);
+    public async expectFirstTrendingVideoHaveTitle(): Promise<void> {
+        await $('ytd-section-list-renderer').waitForDisplayed();
+        await $('ytd-video-renderer').waitForDisplayed();
 
         const videos = await this.videoResults;
         if (!videos || await videos.length === 0) {
@@ -92,26 +89,33 @@ class YouTubePage extends Page {
 
         const title = await this.firstVideoTitle;
         await expect(title).toHaveAttribute('title');
-        const value = await title.getAttribute('title');
-        if (!value) throw new Error('Video title is empty');
+        await expect(title).toHaveAttribute('title', expect.stringMatching(/\S+/));
     }
 
     public async goToSubscriptions(): Promise<void> {
-        const guide = await this.guideButton;
-        await guide.click();
-        const entries = await this.guideEntries;
-        for (const entry of entries) {
-            const text = await entry.getText();
-            if (text.toLowerCase().includes('subscriptions')) {
-                await entry.click();
-                await browser.waitUntil(
-                    async (): Promise<boolean> => (await browser.getUrl()).includes('/feed/subscriptions'),
-                    { timeout: 10000, timeoutMsg: 'Expected to be on subscriptions page' }
-                );
-                return;
-            }
+        try {
+            await this.guideButton.click();
+            const subscriptionsEntry = await $(
+                'a[title="Subscriptions"]'
+            );
+            await subscriptionsEntry.waitForDisplayed({ timeout: 5000 });
+            await subscriptionsEntry.click();
+        } catch {
+            await browser.url('/feed/subscriptions');
         }
-        throw new Error('Subscriptions link not found');
+
+        await browser.waitUntil(async () => {
+            const url = await browser.getUrl();
+            return url.includes('/feed/subscriptions');
+        }, {
+            timeout: 10000,
+            timeoutMsg: 'Expected to be on subscriptions page'
+        });
+    }
+
+    public async expectOnSubscriptionsPage(): Promise<void> {
+        const url = await browser.getUrl();
+        expect(url).toContain('/feed/subscriptions');
     }
 
     public async openVideo(videoId: string): Promise<void> {
