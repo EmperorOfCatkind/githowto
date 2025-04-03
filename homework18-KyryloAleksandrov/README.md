@@ -1,3 +1,4 @@
 Homework 18 by Kyrylo Aleksandrov
 
-YouTube testsuite using Playwright. I've changed the amount of workers to 1, it runs more stable that way and I've only left chromium as a browser to run tests
+YouTube test suite using Playwright, reworked it according to comments. Sometimes it still doesn't press Accept All or click at sidebar when it's already opened. 
+I don't know why, can't catch the timing. Tried with openSideBar() method, but it still flaky.
