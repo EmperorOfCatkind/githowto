@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { ReferenceSection } from 'src/elements/reference-section.page';
 import { disambiguationTerms } from 'src/helpers/disambiguous-terms';
 import { languages } from 'src/helpers/languages';
 import { queries } from 'src/helpers/queries';
@@ -50,13 +49,10 @@ test.describe('Wikipedia test suite', () => {
                 await expect(article.languageDropdownToggle).toBeVisible();
                 await article.languageDropdownToggle.click({ force: true });
 
-                const selector = `.vector-menu-content a[lang='${code}']`;
-                await page.locator(selector).waitFor({ state: 'attached', timeout: 5000 });
+                const link = article.languageLinkInDropdown(code);
+                await link.waitFor({ state: 'attached', timeout: 5000 });
 
-                await page.evaluate((lang) => {
-                    const el = document.querySelector(`.vector-menu-content a[lang='${lang}']`) as HTMLElement;
-                    if (el) el.click();
-                }, code);
+                await article.clickLanguageLinkByCode(code);
 
                 await expect(page).toHaveURL(new RegExp(`^https://${domain}/`));
                 await expect(article.title).toBeVisible();
@@ -83,7 +79,7 @@ test.describe('Wikipedia test suite', () => {
 
     test('Should jump to corresponding footnotes for up to 5 references', async ({ page }) => {
         const home = new HomePage(page);
-        const references = new ReferenceSection(page);
+        const article = new ArticlePage(page);
 
         const searchQuery = queries[0];
 
@@ -91,7 +87,7 @@ test.describe('Wikipedia test suite', () => {
         await home.submitSearch(searchQuery);
 
         for (let i = 0; i < 5; i++) {
-            const refLink = references.inlineReference(i);
+            const refLink = article.references.inlineReference(i);
 
             const count = await refLink.count();
             if (count === 0) {
@@ -101,12 +97,12 @@ test.describe('Wikipedia test suite', () => {
 
             const href = await refLink.getAttribute('href');
             if (!href || !href.startsWith('#')) {
-                console.log(`Reference [${i + 1}] does not have a valid href.`);
+                console.log(`Reference [${i + 1}] has invalid or missing href.`);
                 continue;
             }
 
             const footnoteId = href.slice(1);
-            const footnote = references.footnoteById(footnoteId);
+            const footnote = article.references.footnoteById(footnoteId);
 
             await refLink.click();
             await expect(footnote).toBeVisible();
