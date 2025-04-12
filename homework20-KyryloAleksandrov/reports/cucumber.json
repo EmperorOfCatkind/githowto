@@ -1,0 +1,82 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "wikipedia-homepage;open-wikipedia-homepage",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Open Wikipedia homepage",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 16182299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 151689899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 585411499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the title should contain \"Wikipedia\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9896899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8096499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 112146999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "wikipedia-homepage",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Wikipedia homepage",
+    "tags": [],
+    "uri": "features\\wikipedia.feature"
+  }
+]

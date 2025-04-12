@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="1.323" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-12T15:14:25.066Z">
+  <testcase classname="Wikipedia homepage" name="Open Wikipedia homepage" time="0.895">
+    <system-out><![CDATA[Given I am on the homepage..................................................passed
+Then the title should contain "Wikipedia"...................................passed]]></system-out>
+  </testcase>
+</testsuite>
