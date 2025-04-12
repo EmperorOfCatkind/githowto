@@ -1,5 +1,6 @@
-Feature: Wikipedia homepage
+Feature: Wikipedia homepage UI
 
-  Scenario: Open Wikipedia homepage
-    Given I am on the homepage
-    Then the title should contain "Wikipedia"
+  Scenario: Search input and button are visible
+    Given I am on the Wikipedia homepage
+    Then the search input should be visible
+    And the search button should be visible

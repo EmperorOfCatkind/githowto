@@ -1,6 +1,8 @@
 import { IWorldOptions, World } from '@cucumber/cucumber';
 import { Browser, BrowserContext, Page } from 'playwright';
 import config from '../../playwright.config.js';
+import { HomePage } from 'src/pages/home.page.js';
+import { ArticlePage } from 'src/pages/article.page.js';
 
 export class CustomWorld extends World {
     public static globalContext: Map<string, unknown>;
@@ -9,6 +11,8 @@ export class CustomWorld extends World {
     public static browser: Browser;
     public context: BrowserContext;
     public page: Page;
+    public homePage: HomePage;
+    public articlePage: ArticlePage;
 
     public get browser(): Browser {
         return CustomWorld.browser;

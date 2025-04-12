@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "wikipedia-homepage;open-wikipedia-homepage",
-        "keyword": "Scenario",
-        "line": 3,
-        "name": "Open Wikipedia homepage",
+        "id": "wikipedia-article-search;search-for-an-article-and-verify-title-and-language-dropdown",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Search for an article and verify title and language dropdown",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16182299
+              "duration": 15426300
             }
           },
           {
@@ -22,33 +22,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 151689899
+              "duration": 167875799
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "I am on the homepage",
+            "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 585411499
+              "duration": 472684000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Alan Turing\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 865977200
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 5,
-            "name": "the title should contain \"Wikipedia\"",
+            "line": 6,
+            "name": "the article title should be \"Alan Turing\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia.steps.ts:17"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 9896899
+              "duration": 267918899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the language dropdown should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102286299
             }
           },
           {
@@ -56,7 +82,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8096499
+              "duration": 46739099
             }
           },
           {
@@ -64,7 +90,197 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 112146999
+              "duration": 48163099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wikipedia-article-search;search-for-an-article-and-verify-title-and-language-dropdown",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "Search for an article and verify title and language dropdown",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6963299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95048399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Wikipedia homepage",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 454889699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Marie Curie\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 611346200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the article title should be \"Marie Curie\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297851499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the language dropdown should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83001899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47588899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 25807099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wikipedia-article-search;search-for-an-article-and-verify-title-and-language-dropdown",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Search for an article and verify title and language dropdown",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9541900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 102568800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Wikipedia homepage",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 421021800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Isaac Newton\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 590055300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the article title should be \"Isaac Newton\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 307990100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the language dropdown should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106225899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 39791499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43700999
             }
           }
         ],
@@ -72,10 +288,1017 @@
         "type": "scenario"
       }
     ],
-    "id": "wikipedia-homepage",
+    "id": "wikipedia-article-search",
     "line": 1,
     "keyword": "Feature",
-    "name": "Wikipedia homepage",
+    "name": "Wikipedia article search",
+    "tags": [],
+    "uri": "features\\wikipedia-article-search.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "wikipedia-disambiguation-page-validation;confirm-a-term-leads-to-a-disambiguation-page",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Confirm a term leads to a disambiguation page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6022300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 93682599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the article for \"Mercury (disambiguation)\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 438968999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the disambiguation page title should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83913200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the content should indicate it is a disambiguation page",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11419299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "at least one disambiguation link should be present",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13831799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 25932099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31623300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wikipedia-disambiguation-page-validation;confirm-a-term-leads-to-a-disambiguation-page",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "Confirm a term leads to a disambiguation page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8220499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 119303400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the article for \"Jaguar (disambiguation)\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 440371400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the disambiguation page title should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69532000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the content should indicate it is a disambiguation page",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16986399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "at least one disambiguation link should be present",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19813499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9267100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30120899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wikipedia-disambiguation-page-validation;confirm-a-term-leads-to-a-disambiguation-page",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Confirm a term leads to a disambiguation page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7928600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 98809100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the article for \"Java (disambiguation)\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 432309999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the disambiguation page title should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65422599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the content should indicate it is a disambiguation page",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16314800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "at least one disambiguation link should be present",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10989899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15779599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 37376400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wikipedia-disambiguation-page-validation;confirm-a-term-leads-to-a-disambiguation-page",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Confirm a term leads to a disambiguation page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7602499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 93710399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the article for \"Delta (disambiguation)\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 479270300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the disambiguation page title should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72935799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the content should indicate it is a disambiguation page",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14174899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "at least one disambiguation link should be present",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15338599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33781499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 35974200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wikipedia-disambiguation-page-validation;confirm-a-term-leads-to-a-disambiguation-page",
+        "keyword": "Scenario Outline",
+        "line": 15,
+        "name": "Confirm a term leads to a disambiguation page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10680500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 100657300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the article for \"Saturn (disambiguation)\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 442361899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the disambiguation page title should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92984900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the content should indicate it is a disambiguation page",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9221100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "at least one disambiguation link should be present",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23400999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7760500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 32137600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "wikipedia-disambiguation-page-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Wikipedia disambiguation page validation",
+    "tags": [],
+    "uri": "features\\wikipedia-disambiguation.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "wikipedia-article-language-switch;switch-article-to-another-language",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "Switch article to another language",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7897600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 98256500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Wikipedia homepage",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 412817399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Alan Turing\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 579558600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I switch the article language to \"es\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 668610799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should be on the \"es.wikipedia.org\" domain",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89313699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the article title should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67364100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 98053500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57638299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wikipedia-article-language-switch;switch-article-to-another-language",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Switch article to another language",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8568200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 110264900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Wikipedia homepage",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 402251599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Alan Turing\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 591616300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I switch the article language to \"fr\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 460050800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should be on the \"fr.wikipedia.org\" domain",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88447299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the article title should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74782899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 125483500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 68392900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "wikipedia-article-language-switch;switch-article-to-another-language",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Switch article to another language",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7169499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 94834899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Wikipedia homepage",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 398836500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Alan Turing\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 578964700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I switch the article language to \"de\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503049800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should be on the \"de.wikipedia.org\" domain",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 86074199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the article title should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-language.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 144342599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12713599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 55365700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "wikipedia-article-language-switch",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Wikipedia article language switch",
+    "tags": [],
+    "uri": "features\\wikipedia-language.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "wikipedia-article-references-and-footnotes;jump-to-footnotes-for-up-to-5-references",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Jump to footnotes for up to 5 references",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6355700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 98292799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Wikipedia homepage",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 410575700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"Alan Turing\"",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 557786700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should be able to click and view up to 5 valid footnotes",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-references.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 769745399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9135500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43011099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "wikipedia-article-references-and-footnotes",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Wikipedia article references and footnotes",
+    "tags": [],
+    "uri": "features\\wikipedia-references.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "wikipedia-homepage-ui;search-input-and-button-are-visible",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Search input and button are visible",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7590599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 94596800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Wikipedia homepage",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 402122599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the search input should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-home.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25911700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the search button should be visible",
+            "match": {
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-home.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5421800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5368099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 68597799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "wikipedia-homepage-ui",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Wikipedia homepage UI",
     "tags": [],
     "uri": "features\\wikipedia.feature"
   }

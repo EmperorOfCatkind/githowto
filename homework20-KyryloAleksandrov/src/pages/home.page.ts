@@ -1,11 +1,26 @@
-export class HomePage {
-    public constructor(private page: import('playwright').Page) {}
+import { Page, Locator } from 'playwright';
 
-    public async navigate(): Promise<void>{
-        await this.page.goto('/');
+export class HomePage {
+    private page: Page;
+
+    public constructor(page: Page) {
+        this.page = page;
     }
 
-    public async getTitle(): Promise<string> {
-        return this.page.title();
+    public get searchInput(): Locator {
+        return this.page.locator('input[name="search"]');
+    }
+
+    public get searchButton(): Locator {
+        return this.page.locator('button[type="submit"]');
+    }
+
+    public async goto(baseURL: string): Promise<void> {
+        await this.page.goto(baseURL);
+    }
+
+    public async submitSearch(term: string): Promise<void> {
+        await this.searchInput.fill(term);
+        await this.searchButton.click();
     }
 }

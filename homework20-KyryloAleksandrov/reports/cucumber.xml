@@ -1,7 +1,82 @@
 <?xml version="1.0"?>
-<testsuite name="Cucumber" time="1.323" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-12T15:14:25.066Z">
-  <testcase classname="Wikipedia homepage" name="Open Wikipedia homepage" time="0.895">
-    <system-out><![CDATA[Given I am on the homepage..................................................passed
-Then the title should contain "Wikipedia"...................................passed]]></system-out>
+<testsuite name="Cucumber" time="17.679" tests="13" skipped="0" failures="0" errors="0" timestamp="2025-04-12T16:28:28.466Z">
+  <testcase classname="Wikipedia article search" name="Search for an article and verify title and language dropdown - #1.1" time="2">
+    <system-out><![CDATA[Given I am on the Wikipedia homepage........................................passed
+When I search for "Alan Turing".............................................passed
+Then the article title should be "Alan Turing"..............................passed
+And the language dropdown should be visible.................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia article search" name="Search for an article and verify title and language dropdown - #1.2" time="1.628">
+    <system-out><![CDATA[Given I am on the Wikipedia homepage........................................passed
+When I search for "Marie Curie".............................................passed
+Then the article title should be "Marie Curie"..............................passed
+And the language dropdown should be visible.................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia article search" name="Search for an article and verify title and language dropdown - #1.3" time="1.626">
+    <system-out><![CDATA[Given I am on the Wikipedia homepage........................................passed
+When I search for "Isaac Newton"............................................passed
+Then the article title should be "Isaac Newton".............................passed
+And the language dropdown should be visible.................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia disambiguation page validation" name="Confirm a term leads to a disambiguation page - #1.1" time="0.71">
+    <system-out><![CDATA[Given I open the article for "Mercury (disambiguation)".....................passed
+Then the disambiguation page title should be visible........................passed
+And the content should indicate it is a disambiguation page.................passed
+And at least one disambiguation link should be present......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia disambiguation page validation" name="Confirm a term leads to a disambiguation page - #1.2" time="0.719">
+    <system-out><![CDATA[Given I open the article for "Jaguar (disambiguation)"......................passed
+Then the disambiguation page title should be visible........................passed
+And the content should indicate it is a disambiguation page.................passed
+And at least one disambiguation link should be present......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia disambiguation page validation" name="Confirm a term leads to a disambiguation page - #1.3" time="0.691">
+    <system-out><![CDATA[Given I open the article for "Java (disambiguation)"........................passed
+Then the disambiguation page title should be visible........................passed
+And the content should indicate it is a disambiguation page.................passed
+And at least one disambiguation link should be present......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia disambiguation page validation" name="Confirm a term leads to a disambiguation page - #1.4" time="0.757">
+    <system-out><![CDATA[Given I open the article for "Delta (disambiguation)".......................passed
+Then the disambiguation page title should be visible........................passed
+And the content should indicate it is a disambiguation page.................passed
+And at least one disambiguation link should be present......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia disambiguation page validation" name="Confirm a term leads to a disambiguation page - #1.5" time="0.724">
+    <system-out><![CDATA[Given I open the article for "Saturn (disambiguation)"......................passed
+Then the disambiguation page title should be visible........................passed
+And the content should indicate it is a disambiguation page.................passed
+And at least one disambiguation link should be present......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia article language switch" name="Switch article to another language - #1.1" time="2.085">
+    <system-out><![CDATA[Given I am on the Wikipedia homepage........................................passed
+When I search for "Alan Turing".............................................passed
+And I switch the article language to "es"...................................passed
+Then I should be on the "es.wikipedia.org" domain...........................passed
+And the article title should be visible.....................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia article language switch" name="Switch article to another language - #1.2" time="1.935">
+    <system-out><![CDATA[Given I am on the Wikipedia homepage........................................passed
+When I search for "Alan Turing".............................................passed
+And I switch the article language to "fr"...................................passed
+Then I should be on the "fr.wikipedia.org" domain...........................passed
+And the article title should be visible.....................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia article language switch" name="Switch article to another language - #1.3" time="1.887">
+    <system-out><![CDATA[Given I am on the Wikipedia homepage........................................passed
+When I search for "Alan Turing".............................................passed
+And I switch the article language to "de"...................................passed
+Then I should be on the "de.wikipedia.org" domain...........................passed
+And the article title should be visible.....................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia article references and footnotes" name="Jump to footnotes for up to 5 references" time="1.899">
+    <system-out><![CDATA[Given I am on the Wikipedia homepage........................................passed
+When I search for "Alan Turing".............................................passed
+Then I should be able to click and view up to 5 valid footnotes.............passed]]></system-out>
+  </testcase>
+  <testcase classname="Wikipedia homepage UI" name="Search input and button are visible" time="0.614">
+    <system-out><![CDATA[Given I am on the Wikipedia homepage........................................passed
+Then the search input should be visible.....................................passed
+And the search button should be visible.....................................passed]]></system-out>
   </testcase>
 </testsuite>
