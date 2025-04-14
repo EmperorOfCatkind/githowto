@@ -1,9 +1,7 @@
 import { Given, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
-import { DisambiguationPage } from '../pages/disambiguation.page.js';
 
 Given('I open the article for {string}', async function (term: string) {
-    this.disambiguationPage = new DisambiguationPage(this.page);
     const url = `https://en.wikipedia.org/wiki/${encodeURIComponent(term)}`;
     await this.page.goto(url);
 });

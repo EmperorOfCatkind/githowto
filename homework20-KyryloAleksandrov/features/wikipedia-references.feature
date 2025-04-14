@@ -1,6 +1,10 @@
 Feature: Wikipedia article references and footnotes
 
-  Scenario: Jump to footnotes for up to 5 references
+  Scenario Outline: Jump to footnotes for a number of references
     Given I am on the Wikipedia homepage
     When I search for "Alan Turing"
-    Then I should be able to click and view up to 5 valid footnotes
+    Then I should be able to click and view the first <count> valid footnotes
+
+    Examples:
+      | count |
+      | 5     |

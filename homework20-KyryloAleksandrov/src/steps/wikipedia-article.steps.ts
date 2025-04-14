@@ -1,9 +1,7 @@
 import { When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
-import { ArticlePage } from '../pages/article.page.js';
 
 When('I search for {string}', async function (query: string) {
-    this.articlePage = new ArticlePage(this.page);
     await this.homePage.submitSearch(query);
 });
 

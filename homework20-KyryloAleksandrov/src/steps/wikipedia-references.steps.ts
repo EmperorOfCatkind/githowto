@@ -1,16 +1,14 @@
 import { Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
-import { ReferenceSection } from '../elements/reference-section.page.js';
 
-Then('I should be able to click and view up to 5 valid footnotes', async function () {
-    const references = new ReferenceSection(this.page);
-    this.articlePage.references = references;
+Then('I should be able to click and view the first {int} valid footnotes', async function (count: number) {
+    const references = this.articlePage.references;
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < count; i++) {
         const refLink = references.inlineReference(i);
 
-        const count = await refLink.count();
-        if (count === 0) {
+        const exists = await refLink.count();
+        if (exists === 0) {
             console.log(`Reference [${i + 1}] does not exist. Stopping early.`);
             break;
         }

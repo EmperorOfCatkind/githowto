@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 15426300
+              "duration": 17459600
             }
           },
           {
@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 167875799
+              "duration": 159712800
             }
           },
           {
@@ -31,11 +31,11 @@
             "line": 4,
             "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 472684000
+              "duration": 437339899
             }
           },
           {
@@ -44,11 +44,11 @@
             "line": 5,
             "name": "I search for \"Alan Turing\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 865977200
+              "duration": 831817000
             }
           },
           {
@@ -57,11 +57,11 @@
             "line": 6,
             "name": "the article title should be \"Alan Turing\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:19"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 267918899
+              "duration": 354835200
             }
           },
           {
@@ -70,11 +70,11 @@
             "line": 7,
             "name": "the language dropdown should be visible",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:25"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 102286299
+              "duration": 83274599
             }
           },
           {
@@ -82,7 +82,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46739099
+              "duration": 24232300
             }
           },
           {
@@ -90,7 +90,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 48163099
+              "duration": 115926699
             }
           }
         ],
@@ -109,7 +109,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 6963299
+              "duration": 5701600
             }
           },
           {
@@ -117,7 +117,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 95048399
+              "duration": 103866299
             }
           },
           {
@@ -126,11 +126,11 @@
             "line": 4,
             "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 454889699
+              "duration": 427890599
             }
           },
           {
@@ -139,11 +139,11 @@
             "line": 5,
             "name": "I search for \"Marie Curie\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 611346200
+              "duration": 745776399
             }
           },
           {
@@ -152,11 +152,11 @@
             "line": 6,
             "name": "the article title should be \"Marie Curie\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:19"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 297851499
+              "duration": 362465799
             }
           },
           {
@@ -165,11 +165,11 @@
             "line": 7,
             "name": "the language dropdown should be visible",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:25"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 83001899
+              "duration": 74274999
             }
           },
           {
@@ -177,7 +177,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47588899
+              "duration": 21275099
             }
           },
           {
@@ -185,7 +185,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25807099
+              "duration": 102294799
             }
           }
         ],
@@ -204,7 +204,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 9541900
+              "duration": 6319399
             }
           },
           {
@@ -212,7 +212,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 102568800
+              "duration": 100778299
             }
           },
           {
@@ -221,11 +221,11 @@
             "line": 4,
             "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 421021800
+              "duration": 418490399
             }
           },
           {
@@ -234,11 +234,11 @@
             "line": 5,
             "name": "I search for \"Isaac Newton\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 590055300
+              "duration": 570958799
             }
           },
           {
@@ -247,11 +247,11 @@
             "line": 6,
             "name": "the article title should be \"Isaac Newton\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:19"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 307990100
+              "duration": 317426199
             }
           },
           {
@@ -260,11 +260,11 @@
             "line": 7,
             "name": "the language dropdown should be visible",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:25"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 106225899
+              "duration": 95345499
             }
           },
           {
@@ -272,7 +272,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39791499
+              "duration": 37310999
             }
           },
           {
@@ -280,7 +280,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 43700999
+              "duration": 47283800
             }
           }
         ],
@@ -310,7 +310,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 6022300
+              "duration": 8396700
             }
           },
           {
@@ -318,7 +318,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 93682599
+              "duration": 107709500
             }
           },
           {
@@ -327,11 +327,11 @@
             "line": 4,
             "name": "I open the article for \"Mercury (disambiguation)\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 438968999
+              "duration": 409770300
             }
           },
           {
@@ -340,11 +340,11 @@
             "line": 5,
             "name": "the disambiguation page title should be visible",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 83913200
+              "duration": 93168399
             }
           },
           {
@@ -353,11 +353,11 @@
             "line": 6,
             "name": "the content should indicate it is a disambiguation page",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 11419299
+              "duration": 43692200
             }
           },
           {
@@ -366,11 +366,11 @@
             "line": 7,
             "name": "at least one disambiguation link should be present",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 13831799
+              "duration": 18213900
             }
           },
           {
@@ -378,7 +378,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25932099
+              "duration": 14556099
             }
           },
           {
@@ -386,7 +386,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 31623300
+              "duration": 56488699
             }
           }
         ],
@@ -405,7 +405,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8220499
+              "duration": 8534900
             }
           },
           {
@@ -413,7 +413,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 119303400
+              "duration": 107095999
             }
           },
           {
@@ -422,11 +422,11 @@
             "line": 4,
             "name": "I open the article for \"Jaguar (disambiguation)\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 440371400
+              "duration": 435240699
             }
           },
           {
@@ -435,11 +435,11 @@
             "line": 5,
             "name": "the disambiguation page title should be visible",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 69532000
+              "duration": 83724299
             }
           },
           {
@@ -448,11 +448,11 @@
             "line": 6,
             "name": "the content should indicate it is a disambiguation page",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 16986399
+              "duration": 13723999
             }
           },
           {
@@ -461,11 +461,11 @@
             "line": 7,
             "name": "at least one disambiguation link should be present",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 19813499
+              "duration": 16577400
             }
           },
           {
@@ -473,7 +473,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 9267100
+              "duration": 31857700
             }
           },
           {
@@ -481,7 +481,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30120899
+              "duration": 34623300
             }
           }
         ],
@@ -500,7 +500,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7928600
+              "duration": 10123499
             }
           },
           {
@@ -508,7 +508,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 98809100
+              "duration": 107305399
             }
           },
           {
@@ -517,11 +517,11 @@
             "line": 4,
             "name": "I open the article for \"Java (disambiguation)\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 432309999
+              "duration": 444812599
             }
           },
           {
@@ -530,11 +530,11 @@
             "line": 5,
             "name": "the disambiguation page title should be visible",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 65422599
+              "duration": 86702000
             }
           },
           {
@@ -543,11 +543,11 @@
             "line": 6,
             "name": "the content should indicate it is a disambiguation page",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 16314800
+              "duration": 12558999
             }
           },
           {
@@ -556,11 +556,11 @@
             "line": 7,
             "name": "at least one disambiguation link should be present",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 10989899
+              "duration": 13761899
             }
           },
           {
@@ -568,7 +568,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 15779599
+              "duration": 25382900
             }
           },
           {
@@ -576,7 +576,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 37376400
+              "duration": 31945900
             }
           }
         ],
@@ -595,7 +595,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7602499
+              "duration": 10800999
             }
           },
           {
@@ -603,7 +603,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 93710399
+              "duration": 104029300
             }
           },
           {
@@ -612,11 +612,11 @@
             "line": 4,
             "name": "I open the article for \"Delta (disambiguation)\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 479270300
+              "duration": 475262499
             }
           },
           {
@@ -625,11 +625,11 @@
             "line": 5,
             "name": "the disambiguation page title should be visible",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 72935799
+              "duration": 103668899
             }
           },
           {
@@ -638,11 +638,11 @@
             "line": 6,
             "name": "the content should indicate it is a disambiguation page",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 14174899
+              "duration": 29719300
             }
           },
           {
@@ -651,11 +651,11 @@
             "line": 7,
             "name": "at least one disambiguation link should be present",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 15338599
+              "duration": 16052200
             }
           },
           {
@@ -663,7 +663,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33781499
+              "duration": 10085300
             }
           },
           {
@@ -671,7 +671,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 35974200
+              "duration": 33858899
             }
           }
         ],
@@ -690,7 +690,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 10680500
+              "duration": 10010700
             }
           },
           {
@@ -698,7 +698,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 100657300
+              "duration": 106607799
             }
           },
           {
@@ -707,11 +707,11 @@
             "line": 4,
             "name": "I open the article for \"Saturn (disambiguation)\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 442361899
+              "duration": 414709800
             }
           },
           {
@@ -720,11 +720,11 @@
             "line": 5,
             "name": "the disambiguation page title should be visible",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:20"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 92984900
+              "duration": 71272500
             }
           },
           {
@@ -733,11 +733,11 @@
             "line": 6,
             "name": "the content should indicate it is a disambiguation page",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:25"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 9221100
+              "duration": 17628699
             }
           },
           {
@@ -746,11 +746,11 @@
             "line": 7,
             "name": "at least one disambiguation link should be present",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:31"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-disambiguation.steps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 23400999
+              "duration": 17451600
             }
           },
           {
@@ -758,7 +758,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7760500
+              "duration": 36883299
             }
           },
           {
@@ -766,7 +766,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32137600
+              "duration": 39908899
             }
           }
         ],
@@ -796,7 +796,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7897600
+              "duration": 8969999
             }
           },
           {
@@ -804,7 +804,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 98256500
+              "duration": 105075499
             }
           },
           {
@@ -813,11 +813,11 @@
             "line": 4,
             "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 412817399
+              "duration": 428996499
             }
           },
           {
@@ -826,11 +826,11 @@
             "line": 5,
             "name": "I search for \"Alan Turing\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 579558600
+              "duration": 587599299
             }
           },
           {
@@ -843,7 +843,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 668610799
+              "duration": 716378400
             }
           },
           {
@@ -856,7 +856,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 89313699
+              "duration": 92224399
             }
           },
           {
@@ -869,7 +869,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 67364100
+              "duration": 70730400
             }
           },
           {
@@ -877,7 +877,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 98053500
+              "duration": 98556099
             }
           },
           {
@@ -885,7 +885,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 57638299
+              "duration": 58177400
             }
           }
         ],
@@ -904,7 +904,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8568200
+              "duration": 8623700
             }
           },
           {
@@ -912,7 +912,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 110264900
+              "duration": 134825799
             }
           },
           {
@@ -921,11 +921,11 @@
             "line": 4,
             "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 402251599
+              "duration": 414981400
             }
           },
           {
@@ -934,11 +934,11 @@
             "line": 5,
             "name": "I search for \"Alan Turing\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 591616300
+              "duration": 605304399
             }
           },
           {
@@ -951,7 +951,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 460050800
+              "duration": 700262099
             }
           },
           {
@@ -964,7 +964,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 88447299
+              "duration": 86486600
             }
           },
           {
@@ -977,7 +977,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 74782899
+              "duration": 80905999
             }
           },
           {
@@ -985,7 +985,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 125483500
+              "duration": 133963599
             }
           },
           {
@@ -993,7 +993,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 68392900
+              "duration": 57972099
             }
           }
         ],
@@ -1012,7 +1012,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7169499
+              "duration": 6962700
             }
           },
           {
@@ -1020,7 +1020,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 94834899
+              "duration": 108906699
             }
           },
           {
@@ -1029,11 +1029,11 @@
             "line": 4,
             "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 398836500
+              "duration": 417331700
             }
           },
           {
@@ -1042,11 +1042,11 @@
             "line": 5,
             "name": "I search for \"Alan Turing\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 578964700
+              "duration": 748425500
             }
           },
           {
@@ -1059,7 +1059,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 503049800
+              "duration": 699949800
             }
           },
           {
@@ -1072,7 +1072,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 86074199
+              "duration": 79823800
             }
           },
           {
@@ -1085,7 +1085,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 144342599
+              "duration": 150367900
             }
           },
           {
@@ -1093,7 +1093,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 12713599
+              "duration": 8321099
             }
           },
           {
@@ -1101,7 +1101,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 55365700
+              "duration": 46318100
             }
           }
         ],
@@ -1121,17 +1121,17 @@
     "elements": [
       {
         "description": "",
-        "id": "wikipedia-article-references-and-footnotes;jump-to-footnotes-for-up-to-5-references",
-        "keyword": "Scenario",
-        "line": 3,
-        "name": "Jump to footnotes for up to 5 references",
+        "id": "wikipedia-article-references-and-footnotes;jump-to-footnotes-for-a-number-of-references",
+        "keyword": "Scenario Outline",
+        "line": 10,
+        "name": "Jump to footnotes for a number of references",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 6355700
+              "duration": 8536100
             }
           },
           {
@@ -1139,7 +1139,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 98292799
+              "duration": 106745200
             }
           },
           {
@@ -1148,11 +1148,11 @@
             "line": 4,
             "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 410575700
+              "duration": 424629600
             }
           },
           {
@@ -1161,24 +1161,24 @@
             "line": 5,
             "name": "I search for \"Alan Turing\"",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-article.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 557786700
+              "duration": 578154399
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "I should be able to click and view up to 5 valid footnotes",
+            "name": "I should be able to click and view the first 5 valid footnotes",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-references.steps.ts:13"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\wikipedia-references.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 769745399
+              "duration": 839752599
             }
           },
           {
@@ -1186,7 +1186,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 9135500
+              "duration": 8492099
             }
           },
           {
@@ -1194,7 +1194,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 43011099
+              "duration": 52365499
             }
           }
         ],
@@ -1224,7 +1224,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7590599
+              "duration": 8893200
             }
           },
           {
@@ -1232,7 +1232,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 94596800
+              "duration": 107366099
             }
           },
           {
@@ -1241,11 +1241,11 @@
             "line": 4,
             "name": "I am on the Wikipedia homepage",
             "match": {
-              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:12"
+              "location": "file:\\F:\\gitfiles\\githowto\\homework20-KyryloAleksandrov\\src\\steps\\common.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 402122599
+              "duration": 432871699
             }
           },
           {
@@ -1258,7 +1258,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25911700
+              "duration": 31300699
             }
           },
           {
@@ -1271,7 +1271,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5421800
+              "duration": 9873500
             }
           },
           {
@@ -1279,7 +1279,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 5368099
+              "duration": 7263399
             }
           },
           {
@@ -1287,7 +1287,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 68597799
+              "duration": 94607700
             }
           }
         ],
