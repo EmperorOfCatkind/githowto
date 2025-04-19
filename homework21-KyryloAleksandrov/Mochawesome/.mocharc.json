@@ -1,0 +1,11 @@
+{
+    "extension": "ts",
+    "spec": "tests/**/*.spec.ts",
+    "require": ["tsx"],
+    "timeout": 120000,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportFilename": "customReportFilename",
+        "quiet": true
+    }
+}
