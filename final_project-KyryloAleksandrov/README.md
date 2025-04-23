@@ -1,4 +1,12 @@
-Homework 18 by Kyrylo Aleksandrov
+Final project by Kyrylo Aleksandrov
 
-YouTube test suite using Playwright, reworked it according to comments. Sometimes it still doesn't press Accept All or click at sidebar when it's already opened. 
-I don't know why, can't catch the timing. Tried with openSideBar() method, but it still flaky.
+This is the final project for QA Automation course.
+
+Webpage being tested - https://new.fophelp.pro/
+
+For E2E UI testing I am using Playwright
+For API testing I am using Mocha and Chai (with playwright browser to grab cookies)
+
+To run API tests - npm run test:api
+To run UI tests - npm run test:ui
+To run API and UI together - npm run test:all

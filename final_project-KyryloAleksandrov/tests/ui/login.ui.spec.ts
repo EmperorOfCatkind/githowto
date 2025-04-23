@@ -1,9 +1,9 @@
-/*import test, { expect } from 'playwright/test';
+import { test, expect } from '@playwright/test';
 import { Config } from 'src/helpers/config.helper';
 import { MainPage } from 'src/pages/main.page';
 import { LoginPage } from 'src/pages/login.page';
 
-test('should log in and navigate to profile page', async ({ page }) => {
+test('Should log in and navigate to profile page', async ({ page }) => {
     const homePage = new MainPage(page);
     await homePage.goto();
 
@@ -23,4 +23,4 @@ test('should log in and navigate to profile page', async ({ page }) => {
     ]);
 
     await expect(page).toHaveURL(/\/auth\/profile$/);
-});*/
+});

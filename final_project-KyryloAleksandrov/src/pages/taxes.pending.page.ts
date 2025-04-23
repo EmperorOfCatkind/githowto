@@ -10,8 +10,4 @@ export class TaxesPendingPage {
     public get pendingTaxesTable(): Locator {
         return this.page.locator('#not-payed-table table[aria-label="simple table"]');
     }
-
-    /*public async goto(): Promise<void> {
-        await this.page.goto('/taxes/pending');
-    }*/
 }

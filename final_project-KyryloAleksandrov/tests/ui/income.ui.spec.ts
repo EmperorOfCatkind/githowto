@@ -1,4 +1,4 @@
-import test, { expect } from 'playwright/test';
+import { test, expect } from '@playwright/test';
 import { Config } from 'src/helpers/config.helper';
 import { IncomesPage } from 'src/pages/income.page';
 import { LoginPage } from 'src/pages/login.page';
@@ -52,8 +52,8 @@ test.describe('Income Page ', () => {
 
     test('adds the new row to income table', async ({ page }) => {
         incomesPage = new IncomesPage(page);
-        const income = '1000';
-        const comment = 'test';
+        const income = Config.incomeTestValue;
+        const comment = Config.incomeCommentTestValue;
 
         await mainPage.sideNavigation.clickProfits();
 
@@ -64,8 +64,7 @@ test.describe('Income Page ', () => {
         await incomesPage.addIncomePopUp.commentInput.fill(comment);
         await incomesPage.addIncomePopUp.addButton.click();
 
-        await expect(incomesPage.getRowCount()).toBeGreaterThan(0);
+        await expect(incomesPage.incomeTableRow.filledIncomeCell).toBeVisible();
+        await expect(incomesPage.incomeTableRow.filledCommentCell).toBeVisible();
     });
-
 });
-
