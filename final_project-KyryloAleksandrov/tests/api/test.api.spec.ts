@@ -1,7 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { expect } from 'chai';
-import { CreateExpenseDto } from 'src/dto/expenses.dto';
-import { CreateIncomeDto, IncomesResponse } from 'src/dto/incomes.dto';
+import { IncomesResponse } from 'src/dto/incomes.dto';
 import { Config } from 'src/helpers/config.helper';
 import { grabSessionCookie } from 'src/services/login-service';
 
@@ -16,7 +15,7 @@ describe('API test suite', function () {
         cookieHeader = await grabSessionCookie();
     });
 
-    it('Should fetch the incomes map with a valid cookie', async () => {
+    it('Should fetch the incomes map with a valid cookie after login', async () => {
         const url = `${Config.baseURL}api/incomes?`;
         const response: AxiosResponse<IncomesResponse> = await axios.get<IncomesResponse>(url, {
             headers: { Cookie: cookieHeader },
@@ -27,14 +26,7 @@ describe('API test suite', function () {
     });
 
     it('Should return success message when adding a new income', async () => {
-        const dateString = new Date().toISOString().split('.')[0];
-        const newIncomePayload: CreateIncomeDto = {
-            Date: dateString,
-            Income: '1234.56',
-            Currency: 'UAH',
-            Comment: 'Automated test income entry',
-            Cash: false
-        };
+        const newIncomePayload = Config.newIncomePayload;
 
         const postRes = await axios.post<string>(
             `${Config.baseURL}api/incomes/add`,
@@ -57,14 +49,7 @@ describe('API test suite', function () {
     });
 
     it('Should return success message when adding a new expense', async () => {
-        const dateString = new Date().toISOString().split('.')[0];
-        const newExpensePayload: CreateExpenseDto = {
-            Date: dateString,
-            Expense: '1555',
-            Currency: 'UAH',
-            Comment: 'Automated test expense entry',
-            Cash: false
-        };
+        const newExpensePayload = Config.newExpensePayload;
 
         const postRes = await axios.post<string>(
             `${Config.baseURL}api/expenses/add`,
