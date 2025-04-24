@@ -37,11 +37,7 @@ describe('API test suite', function () {
                 validateStatus: () => true
             }
         );
-
-        // 1) correct status
         expect(postRes.status).to.be.oneOf([200, 201]);
-
-        // 2) body matches exactly the pattern
         expect(postRes.data).to.match(
             /^Successfully created income ID: .+$/,
             'Response should be "Successfully created income ID: <some id>"'
