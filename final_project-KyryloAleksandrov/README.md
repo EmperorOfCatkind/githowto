@@ -7,7 +7,7 @@ I've focused primarily on incomes and expenses. You can see it in both UI and AP
 Also, both API and UI tests check login process, with API doing it to grab a cookie header to utilize in the next tests.
 
 For E2E UI testing I am using Playwright
-For API testing I am using Mocha and Chai (with playwright browser to grab cookies)
+For API testing I am using Mocha and Chai (with playwright browser to grab cookies in login service). For http request Axious is used. 
 
 To run API tests - npm run test:api
 To run UI tests - npm run test:ui
