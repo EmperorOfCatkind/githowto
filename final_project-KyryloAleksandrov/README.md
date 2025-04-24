@@ -3,6 +3,7 @@ Final project by Kyrylo Aleksandrov
 This is the final project for QA Automation course.
 
 Webpage being tested - https://new.fophelp.pro/ Due to some personal things I haven't got as much time as I wanted to work on it, but I've tried my best :)
+
 I've focused primarily on incomes and expenses. You can see it in both UI and API tests - I primarily test whether new income or expense can be added.
 Also, both API and UI tests check login process, with API doing it to grab a cookie header to utilize in the next tests.
 

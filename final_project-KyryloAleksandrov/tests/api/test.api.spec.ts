@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { expect } from 'chai';
 import { IncomesResponse } from 'src/dto/incomes.dto';
 import { Config } from 'src/helpers/config.helper';
-import { grabSessionCookie } from 'src/services/login-service';
+import { grabSessionCookie } from 'src/services/cookie-service';
 
 
 describe('API test suite', function () {
